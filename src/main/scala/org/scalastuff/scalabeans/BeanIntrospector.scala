@@ -102,7 +102,7 @@ object BeanIntrospector {
       field <- c.getDeclaredFields
       name = field.getName
 
-      if !name.contains('$')
+      if ctorParameterNames.contains(name) || !name.contains('$')
       if !field.isSynthetic
 //      if typeSupported(scalaTypeOf(field.getGenericType))
 
